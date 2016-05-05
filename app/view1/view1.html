@@ -1,1 +1,11 @@
-<p>This is the partial for view 1.</p>
+<div>how many rows<input ng-model="rows" type="number"></div>
+<div>how many columns up to 12<input ng-model="columns" type="number" max="12"></div>
+<div class="container">
+	<div ng-repeat="row in getRows(rows) track by $index">
+		<div class="row">
+			<div ng-repeat="column in getColumns(columns) track by $index">
+				<div class="col-lg-1 columns"></div>
+			</div>
+		</div>
+	</div>
+</div>
